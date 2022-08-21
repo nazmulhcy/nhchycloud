@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,800;1,400;1,800;1,900&family=Rubik+Maze&display=swap");
+
+.date {
+  font-family: "Bebas Neue", cursive;
+  font-family: "Playfair Display", serif;
+  /* font-family: "Rubik Maze", cursive; */
+}
