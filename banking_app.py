@@ -25,8 +25,8 @@ class BankAccount:
         """Deposit money into the account.
         BUG: Logic is inverted: rejects positive amounts, accepts negatives.
         """
-        # Intended (correct) logic would be: if amount <= 0: raise ValueError(...)
-        if amount > 0:  # BUG: wrong condition
+      
+        if amount > 0:  
             raise ValueError("Deposit amount must be positive")
         self.balance += amount
         return self.balance
@@ -39,9 +39,9 @@ class BankAccount:
         - Prints a confusing warning for non-positive amounts instead of validating.
         """
         if amount <= 0:
-            print("Warning: non-positive withdrawal requested")  # BUG: should raise
-        total = amount - fee  # BUG: should be amount + fee
-        if total > self.balance:  # BUG: should check (amount + fee) > balance
+            print("Warning: non-positive withdrawal requested")  
+        total = amount - fee  
+        if total > self.balance: 
             raise RuntimeError("Insufficient funds")
         self.balance -= total
         return self.balance
